@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Repositorio</title>
+</head>
+<body>
+    <h1>Repositorio</h1>
+    <h2>Memes</h2>
+    {% for meme in memes %}
+        <p>{{ meme.content }}</p>
+    {% endfor %}
+    <h2>Gifs</h2>
+    {% for gif in gifs %}
+        <p>{{ gif.content }}</p>
+    {% endfor %}
+    <h2>Menssagens</h2>
+    {% for message in messages %}
+        <p>{{ message.content }}</p>
+    {% endfor %}
+    <a href="{{ url_for('upload') }}">Subir novo conteudo</a>
+</body>
+</html>

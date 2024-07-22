@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Upload</title>
+</head>
+<body>
+    <h1>Subir novo meme</h1>
+    <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+        <label for="meme">Upload Meme:</label>
+        <input type="file" name="meme">
+        <br>
+        <label for="gif">Upload Gif:</label>
+        <input type="file" name="gif">
+        <br>
+        <label for="message">Menssagem:</label>
+        <input type="text" name="message">
+        <br>
+        <input type="submit" value="Upload">
+    </form>
+    <a href="{{ url_for('index') }}">Voltar para a Home</a>
+</body>
+</html>
